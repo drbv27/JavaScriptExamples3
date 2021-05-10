@@ -11,7 +11,16 @@
 //E9S1.Solucion Simple:
 console.log("-----------------------------------------------------------------------------------")
 console.log("Ejercicio 9:")
+function getRandomArbitrary(min=501, max=600) {
+    return Math.round(Math.random() * (max - min) + min);
 
+  }
+console.log(`El número aleatorio es: "${getRandomArbitrary()}"`);
+
+//E9S2.Arrow Function
+const aleatorio = (min=501, max=600) => Math.round(Math.random() * (max - min) + min);
+
+console.log(`El número entre 501 y 600 es: "${aleatorio()}"`)
 
 //--------------------------------------------------------------------------------------------
 
