@@ -27,7 +27,43 @@ console.log(`El número entre 501 y 600 es: "${aleatorio()}"`)
 //E10S1.Solución Simple
 console.log("-----------------------------------------------------------------------------------")
 console.log("Ejercicio 10:")
+function capicua(num){
+    let myArr = String(num).split("").map((num)=>{
+        return Number(num)
+      })
+    let myArrI = myArr.reverse().join("")
+        myArrI = parseInt(myArrI)
 
+    if (num === myArrI){
+        console.log(`El numero: "${num}", es capicua`)
+    }else{
+        console.log(`El numero: "${num}", NO es capicua`)
+    }
+    
+}
+capicua(2002)
+
+//E10S2 Expresada y con validacion
+const capicua2 = function (num="") {
+    if(!num) console.warn("No Digitaste número para evaluar")
+    
+    let numA = parseInt(num.toString().split("").reverse().join(""))
+    if (num===numA) {
+        console.info(`El numero: "${num}", es capicua`)
+    } else {
+        console.info(`El numero: "${num}",NO es capicua`)
+    }
+}
+capicua2(454)
+
+//E10S3 Arrow function validacion y Op.ternario
+const capicua3 = (num="") =>{
+    if(!num) console.warn("No Digitaste número para evaluar")
+    let numI = parseInt(num.toString().split("").reverse().join(""))
+    (num===numI)
+    ?console.info(`El numero: "${num}", es capicua`)
+    :console.info(`El numero: "${num}",NO es capicua`)
+}
 
 
 //--------------------------------------------------------------------------------------------
