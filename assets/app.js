@@ -71,3 +71,30 @@ const capicua3 = (num="") =>{
 //E11S1.Solución Simple
 console.log("-----------------------------------------------------------------------------------")
 console.log("Ejercicio 11:")
+function factorial (num) {
+    let fact = 1;
+    for (let index = 1; index <= num; index++) {
+        fact = fact*index;
+    }
+    console.log(fact);
+}
+factorial(5)
+
+//E11S2.F Expresada y con validacion
+const factor = function (num){
+    let fact = 1;
+    for (let index = 1; index <= num; index++) {
+        fact = fact*index;
+    }
+    console.log(fact);
+}
+factor(6);
+
+//E11S3. Compresed solution and validation
+const factorA = num =>{
+    if(!num)console.warn("No digitaste un número.")
+    let fac = 1;
+    for (let i = 1; i <= num; i++) fac = fac*i;
+    console.info(`El factorial de "${num}" es igual a "${fac}"`);
+}
+factorA(7)
