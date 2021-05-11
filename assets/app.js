@@ -13,7 +13,6 @@ console.log("-------------------------------------------------------------------
 console.log("Ejercicio 9:")
 function getRandomArbitrary(min=501, max=600) {
     return Math.round(Math.random() * (max - min) + min);
-
   }
 console.log(`El número aleatorio es: "${getRandomArbitrary()}"`);
 
@@ -39,7 +38,6 @@ function capicua(num){
     }else{
         console.log(`El numero: "${num}", NO es capicua`)
     }
-    
 }
 capicua(2002)
 
@@ -98,3 +96,17 @@ const factorA = num =>{
     console.info(`El factorial de "${num}" es igual a "${fac}"`);
 }
 factorA(7)
+
+//E11S4
+const factB = (num=undefined) => {
+    if (num===undefined) return console.warn("No ingresaste un número");
+
+    if (typeof num !== "number") return console.error(`El valor "${num} ingresado no es un número`);
+
+    if (num <= 0)return console.error("El numero no puede ser cero o negativo");
+
+    let fact = 1;
+    for (let i = num ; i>1 ; i--) fact *=i;
+    console.info(`El factorial de "${num}" es igual a "${fact}"`);
+}
+factB(6)
